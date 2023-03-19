@@ -16,7 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  background-color: #e6f4fd;
   width: 100vw;
 }
 
@@ -97,10 +97,12 @@
     opacity: 0;
   }
   .menuCon ul {
-    background-color: #cc5d5d;
+    background-color: white;
     height: 13rem;
     display: -ms-grid;
     display: grid;
+    -webkit-box-shadow: 2px 2px 2px grey;
+            box-shadow: 2px 2px 2px grey;
   }
   .menuCon ul li {
     color: #403f3f;
