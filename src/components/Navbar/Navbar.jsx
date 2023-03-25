@@ -1,4 +1,4 @@
-import './navbar.css';
+import './navbar.scss';
 import { useRef, useState, useEffect } from 'react';
 import logo from '../../assets/houselogobg.png'
 

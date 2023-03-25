@@ -6,6 +6,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,200");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,0,200");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("technor.css");
+@import url("clash-display.css");
+@import url("supreme.css");
+
+
+
 
 
 
@@ -41,10 +47,11 @@
     overflow-y: hidden;
 
     .firstCon_mainText{
-        // background-color: violet;
+        font-family: 'technor-Variable';
         width: 80%;
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
+        font-weight: 600;
     }
 
     .firstCon_secText{
@@ -54,7 +61,8 @@
         div:first-child{
             
             p{
-                line-height: 2rem;    
+                line-height: 2rem;
+                font-family: $priFont;
             }
         }
 
@@ -68,6 +76,7 @@
                 width: fit-content;
                 padding: 0.3rem 1rem 0.3rem 1rem;
                 color: white;
+                font-family: $secFont;
                 
             }
         }
@@ -85,6 +94,7 @@
             p:first-child{
                 font-weight: bolder;
                 font-size: 1.5rem;
+                font-family: $mainFont;
             
                 span{
                     color: blue;
@@ -110,12 +120,12 @@
 }
 
 .filterDiv{
-height: 30vh;
+height: 60vh;
 position: relative;
 }
 
 .filter_Div{
-    box-shadow: 2px 2px 4px  grey;
+    box-shadow: 0px 1px 1px  grey;
     position: relative;
     background-color: white;
     display: grid;
@@ -127,6 +137,7 @@ position: relative;
     top: -5rem;
 
     .search_first_text{
+        font-family: $priFont;
         font-weight: bold;
     }
 }
@@ -138,8 +149,9 @@ position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
-    margin-left: -1rem;
+    // margin-left: -1rem;
     gap: 10px;
+   
    
     
     div{
@@ -152,6 +164,7 @@ position: relative;
         cursor: pointer;
         color: #212121;
         padding: 0;
+        font-family: $priFont;
 
         p:last-child{
            color: #454545;
@@ -167,6 +180,7 @@ position: relative;
 
         p{
             color: rgb(255, 255, 255);
+            font-family: $secFont;
         }
     }
 }
@@ -183,7 +197,7 @@ position: relative;
     height: 80%;
     margin: auto;
     position: relative;
-    top: -3rem;
+    top: -10rem;
 
    .first_latest_properties{
        display: flex;
@@ -191,7 +205,15 @@ position: relative;
        position: relative;
         align-items: flex-end;
         position: relative;
-      
+        word-spacing: 0.3rem;
+        font-family: $priFont;
+        font-weight: 600;      
+        font-size: 1.2rem;
+
+        div:nth-child(2){
+            font-family: $priFont;
+        font-weight: 400;
+        }
         
        div{
         cursor: pointer;
@@ -201,7 +223,6 @@ position: relative;
             position: relative;
             top: 0.4rem;
             margin-left: 0.5rem;
-            
            }
         }
        }
@@ -220,10 +241,9 @@ position: relative;
 }
 
 .gridProperties{
-        width: 100%;
-       height: 100%;
-       background-color: whitesmoke;
-       border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
 }
 
 
@@ -248,6 +268,7 @@ position: relative;
             padding: 0.3rem;
             right: 0;
             top: 0.5rem;
+            font-family: $secFont;
     }
     
 }
@@ -278,14 +299,13 @@ position: relative;
 
     div:first-child{
         position: relative;
-        
         margin-top: 1rem;
 
         p:nth-child(2){
             span{
-                position: relative;
-                font-weight: bold;
-        
+            position: relative;
+            font-weight: bold;
+            font-family: $priFont;
             bottom: -0.2rem;
             margin-left: 0.5rem;
             color: #454545;
@@ -318,6 +338,7 @@ position: relative;
             position: relative;
             top: 0.2rem;
             margin-left: 0.1rem;
+            font-family: $priFont;
         }
     }
 
@@ -327,6 +348,7 @@ position: relative;
             position: relative;
             top: 0.2rem;
             margin-left: 0.1rem;
+            font-family: $priFont;
            
         }
     }
@@ -337,6 +359,7 @@ position: relative;
             position: relative;
             top: 0.2rem;
             margin-left: 0.1rem;
+            font-family: $priFont;
         }
     }
 
@@ -348,6 +371,7 @@ position: relative;
     position: relative;
     // margin-top: 1rem;
     color: #454545;
+    font-family: $priFont;
 
     img{
         position: relative;
@@ -371,6 +395,10 @@ position: relative;
         p:first-child{
             font-size: 1.5rem;
             color: rgb(216, 216, 216);
+            font-family: $secFont;
+        }
+        p:last-child{
+            font-family: $priFont;
         }
     }
 
@@ -379,11 +407,247 @@ position: relative;
         width: 40%;
         p{
             line-height: 1rem;
+            font-family: $priFont;
             span{
                 font-size: 3rem;
                 position: absolute;
             }
         }
+    }
+}
+
+
+.servicesDiv{
+    color: rgb(0, 0, 0);
+    height: 120vh;
+    margin-left: 2rem;
+    margin-right: 4.5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    
+}
+
+.services_Div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    height: 50%;
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.services_Div1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 2px 2px 5px rgb(216, 216, 216);
+    margin-left: 2rem;
+    
+}
+
+.services_Div2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right_services_Div1{
+    // background-color: indianred;
+}
+
+.right_services_Div1Pic{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/indoor.jpg);
+    background-size: cover;
+}
+
+.left_services_Div1{
+    width: 100%;
+    height: 50%;
+    display: grid;
+    align-items: center;
+    margin-top: 6rem;    
+
+    p:first-child{
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+        font-family: $priFont;
+        font-weight: 600;
+    }
+
+    .realtorDiv2{
+        width: 90%;
+        margin: auto;
+
+    }
+}
+
+.miscText2{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div{
+        position: relative;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: end;
+        height: fit-content;
+        font-family: $priFont;
+        
+        
+        span{
+            font-size: 1rem;
+           margin-right: 0.5rem;
+           bottom: 0;
+        }
+
+        p:last-child{
+        left: 0;   
+        }
+    }
+
+
+    div{
+        color: grey;
+        p:first-child{
+            
+            span:first-child{
+                position: relative;
+                bottom: -0.2rem;
+                
+            }
+        }
+    }
+
+    
+}
+
+.realtorDiv2{
+    height: 4rem;
+    display: grid;
+    align-items: flex-end;
+    border-top: solid 3px rgb(188, 184, 184);
+    border-radius: 1px;
+}
+
+.services_Div2{
+    font-family: $priFont;
+    div{
+        margin: auto;
+        
+        height: 100%;
+        width: 60%;
+    }
+    p:first-child{
+       
+        position: relative;
+        left: 4.4rem;
+        width: fit-content;
+        position: relative;
+        font-weight: 700;
+
+    }
+
+    p:first-child::before{
+        content: '';
+        border: solid 3px black;
+       display: block;
+       position: relative;
+       width: 50px;
+       top: 15px;
+       left: -70px;
+       border-radius: 5px;
+    }
+
+    p:nth-child(2){
+       
+        font-weight: 600;
+        word-spacing: 0.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    p:nth-child(3){
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        
+        list-style-type: disc;
+        margin-left: 1rem;
+
+        li{
+            margin-right: 4rem;
+        }
+
+        li::marker{
+            color: blue;
+        }
+    }
+
+    p:last-child{
+        background-color: rgb(0, 0, 0);
+        width: fit-content;
+        font-size: 1rem;
+        padding: 0.5rem 2.5rem ;
+        color: whitesmoke;
+        font-family: $secFont;
+        cursor: pointer;
+    }
+}
+
+
+.latestProperties1{
+    background-color: rgb(216, 133, 133);
+}
+
+.latest_Properties1{
+    top: 0;
+    position: relative;
+}
+
+.gridPropertiesText1{
+    text-align: start;
+    margin-left: 0;
+    position: relative;
+    left: -1rem;
+    font-family: $priFont;
+
+    p:first-child{
+        position: relative;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: solid 2px rgb(196, 193, 193);
+        padding-bottom: 0.2rem;
+        width: 10rem;
+    }
+
+    p:first-child::before{
+        content: "";
+        border: solid 1px rgb(29, 8, 184);
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+
+    p:nth-child(2){
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
 }
 
@@ -419,6 +683,12 @@ position: relative;
             margin-left: 0rem;
         }
     }
+
+    .services_Div1{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        
+    }
 }
 
 
@@ -446,6 +716,28 @@ position: relative;
     .latest_Properties{
         height: 70%;
         top: -8rem;
+    }
+
+    .services_Div{
+     grid-template-columns: 1fr;   
+     grid-gap: 5rem;
+     
+     
+    }
+
+    .servicesDiv{
+    height: 180vh;
+    }
+
+    .services_Div2{
+        font-family: $priFont;
+        div{
+            width: 80%;
+        }
+    }
+
+    .right_services_Div1Pic{
+        background-position-y: 50%;
     }
 }
 
@@ -524,17 +816,18 @@ position: relative;
 
     .latestPropDiv{
         grid-template-columns: 1fr;
+        
 
     }
 
     .latestProperties{
         margin-top: 8rem;
-        height: 350vh;
+        height: 250vh;
     }
 
     .latest_Properties{
         height: 70%;
-        top: -4rem;
+        top: -10rem;
     }
 }
 

@@ -1,4 +1,4 @@
-import './homepage.css';
+import './homepage.scss';
 import person1 from '../../assets/pic1.png';
 import person2 from '../../assets/pic2.png';
 import person3 from '../../assets/pic3.png';
@@ -319,6 +319,112 @@ export default function Homepage() {
                             </span>
                         </p>
                     </div>
+                </div>
+            </div>
+
+            <div className='servicesDiv'>
+                <div className='services_Div'>
+                    <div className='services_Div1'>
+                        <div className='left_services_Div1'>
+                            <p>
+                                Villa on Victoria island, Lagos.
+                            </p>
+                            <div className='miscText2'>
+                                <div>
+                                    <p>
+                                        <span class="material-symbols-outlined">
+                                            bed
+                                        </span>
+                                    </p>
+                                    <p>
+                                        4Bed
+                                    </p>
+
+                                </div>
+
+                                <div>
+                                    <p>
+                                        <span class="material-symbols-outlined">
+                                            aspect_ratio
+                                        </span>
+                                    </p>
+                                    <p>
+                                        10mx10m
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p>
+                                        <span class="material-symbols-outlined">
+                                            trending_up
+                                        </span>
+                                    </p>
+                                    <p>
+                                        1800sqft
+                                    </p>
+                                </div>
+                            </div>
+                            <div className='realtorDiv realtorDiv2'>
+                                <img src={person3} />
+
+                            </div>
+
+                        </div>
+                        <div className='right_services_Div1'>
+                            <div className='right_services_Div1Pic'>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className='services_Div2'>
+                        <div>
+                            <p>OUR SERVICES</p>
+                            <p>Your Comfort Is Our Priority</p>
+                            <p>We can help you find the perfect property.
+                                We'll show you a variety of homes in your area and
+                                help you choose the best one for you needs.
+                            </p>
+
+                            <ul>
+                                <li>Wider Audience</li>
+                                <li>Free Marketing</li>
+                                <li>No valuation</li>
+                                <li>Managed viewings</li>
+                            </ul>
+
+                            <p>
+                                See More
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className='latestProperties latestProperties1'>
+                <div className='latest_Properties latest_Properties1'>
+                        <div className='latestPropDiv'>
+
+                            <div className='gridProperties'>
+
+                                <div className='gridPropertiesPic'>
+                                
+                                    <div className='divPic1'>
+                                    </div>
+                                </div>
+
+                                <div className='gridPropertiesText gridPropertiesText1'>
+                                    <p>4 July, 2023</p>
+                                    <p>REDEAN asks Nigerians to embrace real estate business</p>
+                                    <p>See More</p>
+
+                                </div>
+                            </div>
+                        </div>
+                   
                 </div>
             </div>
         </div>
