@@ -917,9 +917,16 @@ position: relative;
         grid-gap: 5rem;
     }
 
-   
-    .latestPropDiv1{
-        margin-top: -8rem;
-    }
+    .latestProperties1{
+        
+        margin-top: -35rem;
+    } 
+  
+}
 
+@media (max-width: 412px){
+    .latestProperties1{ 
+        margin-top: 5rem;
+    } 
+  
 }
