@@ -171,6 +171,8 @@ position: relative;
 
            span{
             font-size: 1.1rem;
+            position: relative;
+            top: 0.3rem;
            }
         }
         
@@ -422,7 +424,7 @@ position: relative;
 
     p{
         position: relative;
-        top: -0.5rem;
+        top: -0.6rem;
     }
 
     img{
@@ -559,6 +561,7 @@ position: relative;
             font-size: 1rem;
            margin-right: 0.5rem;
            bottom: 0;
+           background-color: red;
         }
 
         p:last-child{
@@ -632,11 +635,11 @@ position: relative;
     }
 
     ul{
+        width: 110%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         font-size: 1rem;
         margin-bottom: 2rem;
-        
         list-style-type: disc;
         margin-left: 1rem;
 
@@ -690,6 +693,7 @@ position: relative;
         border-bottom: solid 2px rgb(196, 193, 193);
         padding-bottom: 0.2rem;
         width: 10rem;
+        font-size: 0.9rem;
     }
 
     p:first-child::before{
@@ -714,6 +718,7 @@ position: relative;
         padding: 0.4rem 2rem;
         color: rgb(13, 19, 181);
         background-color: rgb(164, 213, 244);
+        font-size: 0.8rem;
     }
 }
 
@@ -730,8 +735,10 @@ position: relative;
 }
 
 
-
-
+footer{
+    background-color: #212121;
+    // height: 80rem;
+}
 
 
 
@@ -901,7 +908,7 @@ position: relative;
     }
 
     .latestPropDiv1{
-        margin-top: -8rem;
+        margin-top: 0rem;
     }
     
     /******/
@@ -945,7 +952,9 @@ position: relative;
        
     }
 
-    
+    .latestPropDiv1{
+        margin-top: 0rem;
+    }
 }
 
 

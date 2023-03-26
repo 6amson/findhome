@@ -3,6 +3,7 @@ import person1 from '../../assets/pic1.png';
 import person2 from '../../assets/pic2.png';
 import person3 from '../../assets/pic3.png';
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 export default function Homepage() {
@@ -459,6 +460,10 @@ export default function Homepage() {
                    
                 </div>
             </div>
+
+            <footer>
+                < Footer/>
+            </footer>
         </div>
     )
 }
