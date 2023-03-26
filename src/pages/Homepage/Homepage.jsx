@@ -406,13 +406,45 @@ export default function Homepage() {
 
             <div className='latestProperties latestProperties1'>
                 <div className='latest_Properties latest_Properties1'>
-                        <div className='latestPropDiv'>
+                        <div className='latestPropDiv latestPropDiv1'>
 
-                            <div className='gridProperties'>
+                            <div className='gridProperties gridProperties1'>
 
                                 <div className='gridPropertiesPic'>
                                 
-                                    <div className='divPic1'>
+                                    <div className='divPic4'>
+                                    </div>
+                                </div>
+
+                                <div className='gridPropertiesText gridPropertiesText1'>
+                                    <p>4 July, 2023</p>
+                                    <p>REDEAN asks Nigerians to embrace real estate business</p>
+                                    <p>See More</p>
+
+                                </div>
+                            </div>
+
+                            <div className='gridProperties gridProperties1'>
+
+                                <div className='gridPropertiesPic'>
+                                
+                                    <div className='divPic5'>
+                                    </div>
+                                </div>
+
+                                <div className='gridPropertiesText gridPropertiesText1'>
+                                    <p>4 July, 2023</p>
+                                    <p>REDEAN asks Nigerians to embrace real estate business</p>
+                                    <p>See More</p>
+
+                                </div>
+                            </div>
+
+                            <div className='gridProperties gridProperties1'>
+
+                                <div className='gridPropertiesPic'>
+                                
+                                    <div className='divPic6'>
                                     </div>
                                 </div>
 

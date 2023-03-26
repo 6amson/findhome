@@ -392,13 +392,16 @@ position: relative;
     flex-wrap: wrap;
 
     div:first-child{
+        
         p:first-child{
             font-size: 1.5rem;
             color: rgb(216, 216, 216);
             font-family: $secFont;
+            
         }
         p:last-child{
             font-family: $priFont;
+            
         }
     }
 
@@ -419,7 +422,7 @@ position: relative;
 
 .servicesDiv{
     color: rgb(0, 0, 0);
-    height: 120vh;
+    height: 100vh;
     margin-left: 2rem;
     margin-right: 4.5rem;
     margin-top: 3rem;
@@ -442,7 +445,6 @@ position: relative;
     grid-gap: 1rem;
     box-shadow: 2px 2px 5px rgb(216, 216, 216);
     margin-left: 2rem;
-    
 }
 
 .services_Div2{
@@ -541,7 +543,6 @@ position: relative;
     font-family: $priFont;
     div{
         margin: auto;
-        
         height: 100%;
         width: 60%;
     }
@@ -610,7 +611,7 @@ position: relative;
 
 
 .latestProperties1{
-    background-color: rgb(216, 133, 133);
+    background-color: white;
 }
 
 .latest_Properties1{
@@ -618,17 +619,22 @@ position: relative;
     position: relative;
 }
 
+.gridProperties1{
+    background-color: transparent;
+}
+
 .gridPropertiesText1{
     text-align: start;
     margin-left: 0;
     position: relative;
-    left: -1rem;
+    left: -0.5rem;
     font-family: $priFont;
+    
 
     p:first-child{
         position: relative;
         margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
         border-bottom: solid 2px rgb(196, 193, 193);
         padding-bottom: 0.2rem;
         width: 10rem;
@@ -640,7 +646,7 @@ position: relative;
         display: inline-block;
         width: 10px;
         height: 10px;
-        background-color: blue;
+        background-color: rgb(60, 60, 192);
         border-radius: 50%;
         margin-right: 0.5rem;
     }
@@ -649,9 +655,27 @@ position: relative;
         font-weight: 700;
         margin-bottom: 1rem;
     }
+
+    p:nth-child(3){
+        border: solid 1px rgb(164, 213, 244);
+        width: fit-content;
+        padding: 0.4rem 2rem;
+        color: rgb(13, 19, 181);
+        background-color: rgb(164, 213, 244);
+    }
 }
 
+.divPic4{
+    background-image: url(../../assets/p4.jpg);
+}
 
+.divPic5{
+    background-image: url(../../assets/main1.jpg);
+}
+
+.divPic6{
+    background-image: url(../../assets/p6.jpg);
+}
 
 
 
@@ -722,7 +746,6 @@ position: relative;
      grid-template-columns: 1fr;   
      grid-gap: 5rem;
      
-     
     }
 
     .servicesDiv{
@@ -739,6 +762,12 @@ position: relative;
     .right_services_Div1Pic{
         background-position-y: 50%;
     }
+
+    .latest_Properties1{
+        top: 0rem;
+        position: relative;
+    }
+
 }
 
 
@@ -764,6 +793,29 @@ position: relative;
     .filter_Div{
         top: -3rem;
     }
+
+    .intermission{
+        color: grey;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+        flex-wrap: wrap;
+    
+        div:first-child{
+         margin-bottom: 2rem;
+        }
+
+    }
+
+    .gridPropertiesText1{
+        left: -0.1rem;
+    }
+
+    .latestPropDiv1{
+        grid-gap: 5rem;
+    }
+
 }
 
 @media (max-width: 695px){
@@ -828,6 +880,12 @@ position: relative;
     .latest_Properties{
         height: 70%;
         top: -10rem;
+    }
+
+    .latest_Properties1{
+        top: 0rem;
+        position: relative;
+        
     }
 }
 
