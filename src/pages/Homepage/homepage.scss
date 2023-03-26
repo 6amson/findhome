@@ -445,6 +445,7 @@ position: relative;
     grid-gap: 1rem;
     box-shadow: 2px 2px 5px rgb(216, 216, 216);
     margin-left: 2rem;
+    background-color: #212121;
 }
 
 .services_Div2{
@@ -734,7 +735,8 @@ position: relative;
     }
 
     .latestProperties{
-        height: 250vh;
+        height: 200vh;
+        background-color: red;
     }
 
     .latest_Properties{
@@ -786,35 +788,6 @@ position: relative;
            width: 100%;
        }
    }
-
-}
-
-@media (max-width: 415px){
-    .filter_Div{
-        top: -3rem;
-    }
-
-    .intermission{
-        color: grey;
-        display: flex;
-        justify-content: space-between;
-        margin-left: 4.5rem;
-        margin-right: 4.5rem;
-        flex-wrap: wrap;
-    
-        div:first-child{
-         margin-bottom: 2rem;
-        }
-
-    }
-
-    .gridPropertiesText1{
-        left: -0.1rem;
-    }
-
-    .latestPropDiv1{
-        grid-gap: 5rem;
-    }
 
 }
 
@@ -874,7 +847,7 @@ position: relative;
 
     .latestProperties{
         margin-top: 8rem;
-        height: 250vh;
+        height: 200vh;
     }
 
     .latest_Properties{
@@ -889,3 +862,33 @@ position: relative;
     }
 }
 
+@media (max-width: 415px){
+    .filter_Div{
+        top: -3rem;
+    }
+
+    .intermission{
+        color: grey;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+        flex-wrap: wrap;
+    
+        div:first-child{
+         margin-bottom: 2rem;
+        }
+
+    }
+
+    .gridPropertiesText1{
+        left: -0.1rem;
+    }
+
+    .latestPropDiv1{
+        grid-gap: 5rem;
+    }
+
+   
+
+}
