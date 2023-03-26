@@ -445,14 +445,12 @@ position: relative;
     grid-gap: 1rem;
     box-shadow: 2px 2px 5px rgb(216, 216, 216);
     margin-left: 2rem;
-    background-color: #212121;
 }
 
 .services_Div2{
     display: grid;
     justify-content: center;
     align-items: center;
-
 }
 
 .right_services_Div1{
@@ -471,7 +469,7 @@ position: relative;
     height: 50%;
     display: grid;
     align-items: center;
-    margin-top: 6rem;    
+    margin-top: 6rem; 
 
     p:first-child{
         width: 90%;
@@ -828,8 +826,7 @@ position: relative;
             padding-right: 1rem;
             
             p{
-                line-height: 2rem;  
-                
+                line-height: 2rem;
             }
         }
     }
@@ -861,6 +858,26 @@ position: relative;
         
     }
 }
+
+
+
+@media (max-width: 440px){
+    .services_Div1{
+        width: 110%;
+        position: relative;
+        left: -1.5rem;
+    }
+
+    .services_Div2{
+        div{
+            width: 110%;
+            position: relative;
+            left: 0.5rem;
+        }
+    }
+}
+
+
 
 @media (max-width: 415px){
     .filter_Div{
