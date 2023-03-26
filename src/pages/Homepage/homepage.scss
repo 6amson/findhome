@@ -168,6 +168,10 @@ position: relative;
 
         p:last-child{
            color: #454545;
+
+           span{
+            font-size: 1.1rem;
+           }
         }
         
     }
@@ -213,6 +217,8 @@ position: relative;
         div:nth-child(2){
             font-family: $priFont;
         font-weight: 400;
+        font-size: 1rem;
+        word-spacing: 0rem;
         }
         
        div{
@@ -223,6 +229,7 @@ position: relative;
             position: relative;
             top: 0.4rem;
             margin-left: 0.5rem;
+            font-weight: 400;
            }
         }
        }
@@ -301,6 +308,15 @@ position: relative;
         position: relative;
         margin-top: 1rem;
 
+        p:first-child{
+           
+            span{
+                font-size: 1rem;
+                position: relative;
+                top: 0.4rem;
+            }
+        }
+
         p:nth-child(2){
             span{
             position: relative;
@@ -334,32 +350,62 @@ position: relative;
         display: flex;
         bottom: 0.5rem;
         color: #454545;
+
+        p:first-child{
+            span{
+            font-size: 1rem;
+            position: relative;
+            top: 0.2rem;
+            }
+        }
+        
+
         p:nth-child(2){
             position: relative;
             top: 0.2rem;
             margin-left: 0.1rem;
             font-family: $priFont;
+            font-size: 0.8rem;
         }
     }
 
     div:nth-child(2){
         color: #454545;
+
+        p:first-child{
+            span{
+            font-size: 1rem;
+            position: relative;
+            top: 0.2rem;
+            }
+        }
+
         p:nth-child(2){
             position: relative;
             top: 0.2rem;
             margin-left: 0.1rem;
             font-family: $priFont;
-           
+            font-size: 0.8rem;
         }
     }
 
     div:nth-child(3){
         color: #454545;
+
+        p:first-child{
+            span{
+            font-size: 1rem;
+            position: relative;
+            top: 0.2rem;
+            }
+        }
+
         p:nth-child(2){
             position: relative;
             top: 0.2rem;
             margin-left: 0.1rem;
             font-family: $priFont;
+            font-size: 0.8rem;
         }
     }
 
@@ -372,11 +418,17 @@ position: relative;
     // margin-top: 1rem;
     color: #454545;
     font-family: $priFont;
+    font-size: 0.8rem;
+
+    p{
+        position: relative;
+        top: -0.5rem;
+    }
 
     img{
         position: relative;
-        width: 2rem;
-        height: 2rem;
+        width: 1rem;
+        height: 1rem;
         border-radius: 50%;
         bottom: 0.5rem;
         margin-right: 0.5rem;        
@@ -813,9 +865,7 @@ position: relative;
            p{
             font-size: 3rem;
            }
-       } 
-
-            
+        }     
         }
     }
 
@@ -838,6 +888,16 @@ position: relative;
 
     .latestPropDiv{
         grid-template-columns: 1fr;
+    }
+
+    .first_latest_properties{
+       
+        word-spacing: 0rem;
+        div:first-child{
+            p:first-child{
+                word-spacing: 0rem;
+            }
+        }
     }
 
     .latestPropDiv1{
@@ -893,6 +953,30 @@ position: relative;
 @media (max-width: 415px){
     .filter_Div{
         top: -3rem;
+        width: 100%;
+    }
+
+    .searchDiv{
+        justify-content: center;
+        position: relative;
+        
+        div{
+            height: 3rem;
+
+        }
+        div:first-child{
+            p:last-child{
+                position: relative;
+                left: 0.5rem;
+            }
+        }
+        
+        div:nth-child(3){
+            p:last-child{
+                position: relative;
+                left: 0.5rem;
+            }
+        }
     }
 
     .intermission{
