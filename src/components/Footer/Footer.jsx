@@ -21,7 +21,7 @@ export default function Footer() {
                 <div className='footerUpper2'>
                     <div className='div8'></div>
                     <div>
-                        <p>Tiwa savage</p>
+                        <p>Simisola</p>
                         <p>I am glad i contacted findhome for my property,
                             their customer service is so good and exceptional. Highly recommended for anyone.
                         </p>
@@ -53,9 +53,10 @@ export default function Footer() {
                 <div className="item">
                     <h3>Careers</h3>
                     <ul>
-                        <li>Job openings</li>
-                        <li>Employee success</li>
-                        <li>Benefits</li>
+                        <li>No 9, life is but a game street, Off Clifford Avenue</li>
+                        <li>Lesotho, Porto, frodo, Obrigado,</li>
+                        <li>Cardiff, England</li>
+                        <li>email: mrmoneyrora@ecstatic.com</li>
                     </ul>
                 </div>
 
