@@ -35,9 +35,10 @@ export default function Footer() {
                 <div className="item">
                     <h3>Services</h3>
                     <ul>
-                        <li>Web design</li>
-                        <li>Development</li>
-                        <li>Hosting</li>
+                        <li>Real estate evaluation</li>
+                        <li>Rentals</li>
+                        <li>Lease</li>
+                        <li>Morgage</li>
                     </ul>
                 </div>
 
@@ -51,7 +52,7 @@ export default function Footer() {
                 </div>
 
                 <div className="item">
-                    <h3>Careers</h3>
+                    <h3>Contact</h3>
                     <ul>
                         <li>No 9, life is but a game street, Off Clifford Avenue</li>
                         <li>Lesotho, Porto, frodo, Obrigado,</li>
