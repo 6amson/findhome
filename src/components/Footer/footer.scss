@@ -20,13 +20,13 @@
         position: relative;
         background-color: orange;
         display: flex;
-        gap: 3rem;
+        gap: 1rem;
 
         
         div:first-child{
           background-color: green;
-          width: 15rem;
-          height: 50%;
+          width: 10rem;
+          height: 10rem;
           margin: auto;
           background-repeat: no-repeat;
           background-size: cover;
@@ -35,10 +35,13 @@
         div:nth-child(2){
             background-color: rgb(231, 76, 176);
             width: 70%;
-            height: 50%;
+            height: 40%;
+            position: relative;
+            top: -1rem;
             margin: auto;
-            display: grid;
+            display: block;
             align-items: center;
+            font-family: $priFont;
            
 
             p{
@@ -47,11 +50,31 @@
             }
 
             p:first-child{
-                margin-bottom: -4rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            p:nth-child(2){
+                font-size: 0.8rem;
+                margin-bottom: 2rem;
             }
 
             p:nth-child(3){
-                margin-top: -2rem;
+                font-size: 0.7rem;
+                font-weight: 600;
+            }
+
+            p:nth-child(3)::before{
+                position: relative;
+                content: "";
+                border: solid 1px white;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 50%;
+                margin-right: 0.5rem;
+                top: 0.1rem;
             }
           }
     }
@@ -104,13 +127,49 @@
 
 
 
+
 /*****************************************Media QUERY**********************/
 
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
     .footerDivUpper {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .footerDivUpper {
+        div{
+            div:nth-child(2){
+                position: relative;
+                top: -3rem;
+           
+                p:nth-child(2){
+                    font-size: 0.8rem;
+                    margin-bottom: 1rem;
+                }
+        }
+    }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .footerDivUpper {
+        div{
+            width: 120%;
+            position: relative;
+            left: -1.6rem;
+            div:nth-child(2){
+              
+               
+                p:nth-child(2){
+                    font-size: 0.8rem;
+                    margin-bottom: 0.2rem;
+                }
+        }
+    }
     }
 }
