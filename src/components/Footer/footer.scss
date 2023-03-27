@@ -1,12 +1,116 @@
 @import "../../components/variables/variables.scss";
 
 .footerDiv{
+    margin-top: -1rem;
     background-color: aqua;
-    height: max-content;
+    height: 90vh;
 }
 
 .footerDivUpper{
+     height: 60%;
+    position: relative;
     background-color: antiquewhite;
-    height: 30vh;
+    // height: 30vh;
+    display: grid;
+    margin: 0 5rem 5rem 4.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    
+    div{
+        position: relative;
+        background-color: orange;
+        display: flex;
+        gap: 3rem;
+
+        
+        div:first-child{
+          background-color: green;
+          width: 15rem;
+          height: 50%;
+          margin: auto;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        div:nth-child(2){
+            background-color: rgb(231, 76, 176);
+            width: 70%;
+            height: 50%;
+            margin: auto;
+            display: grid;
+            align-items: center;
+           
+
+            p{
+                height: fit-content;
+                background-color: red;
+            }
+
+            p:first-child{
+                margin-bottom: -4rem;
+            }
+
+            p:nth-child(3){
+                margin-top: -2rem;
+            }
+          }
+    }
+
+    .footerUpper1{
+        // background-color: green;
+        
+
+    }
+
+    .footerUpper2{
+        // background-color: rgb(105, 76, 222);
+
+    }
 }
 
+.div7{
+    background-image: url(../../assets/aj.png);
+    
+}
+
+.div8{
+    background-image: url(../../assets/simi.png);
+    
+}
+
+
+.footerDivLower{
+    display: flex;
+    margin: 0 5rem 0 6rem;
+    background-color: bisque;
+
+    div{
+        flex: 1;
+    }
+
+     
+    // div:first-child{
+
+    // }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*****************************************Media QUERY**********************/
+
+
+
+
+@media screen and (max-width: 768px) {
+    .footerDivUpper {
+      flex-direction: column;
+    }
+}
