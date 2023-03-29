@@ -91,8 +91,8 @@ export default function Homepage() {
             const tl1 = gsap.timeline({
                 scrollTrigger: {
                     trigger: filterDiv.current,
-                    start: "top 50%",
-                    end: "bottom 5%",
+                    start: "top 80%",
+                    end: "bottom 60%",
                     scrub: true,
                     markers: true
                 }
