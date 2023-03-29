@@ -35,15 +35,6 @@ export default function Homepage() {
     useEffect(() => {
         const tl = gsap.timeline();
         gsap.registerPlugin(ScrollTrigger);
-
-
-
-
-
-        // if(mainPriParaText.current || mainsecParaText.current || mainTerParaText.current
-        //     || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
-
-        //     }
        
             tl.to(mainPriParaText.current, {
                 duration: 0.5,
@@ -101,7 +92,6 @@ export default function Homepage() {
                     start: "top 80%",
                     end: "bottom 60%",
                     scrub: true,
-                    markers: true,
                 }
             });
 
@@ -120,7 +110,6 @@ export default function Homepage() {
                         start: "top 90%",
                         end: "bottom 60%",
                         scrub: true,
-                        markers: true,
                         
                     }
                 });
@@ -137,7 +126,6 @@ export default function Homepage() {
                         start: "top 90%",
                         end: "bottom 60%",
                         scrub: true,
-                        markers: true
                     }
                 });
     
@@ -153,7 +141,6 @@ export default function Homepage() {
                         start: "top 90%",
                         end: "bottom 60%",
                         scrub: true,
-                        markers: true
                     }
                 });
     
@@ -169,7 +156,6 @@ export default function Homepage() {
                         start: "top 90%",
                         end: "bottom 60%",
                         scrub: true,
-                        markers: true
                     }
                 });
     
@@ -185,7 +171,6 @@ export default function Homepage() {
                         start: "top 90%",
                         end: "bottom 60%",
                         scrub: true,
-                        markers: true
                     }
                 });
 
@@ -200,7 +185,6 @@ export default function Homepage() {
                         start: "top 90%",
                         end: "bottom 60%",
                         scrub: true,
-                        markers: true
                     }
                 });
 
@@ -210,9 +194,96 @@ export default function Homepage() {
                 })
 
                
-             } //elseif(isSmallScreen){
+            }else if(isSmallScreen){
+                const tl2 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv1.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        
+                    }
+                });
+    
+                tl2.to(gridpropDiv1.current, {
+                    opacity: 1,
+                    x: -60,
+                    duration: 1,
+                })
 
-            // }
+                const tl3 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv2.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    }
+                });
+    
+                tl3.to(gridpropDiv2.current, {
+                    opacity: 1,
+                    duration: 1,
+                    x: 60,
+                })
+                
+                const tl4 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv3.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    }
+                });
+    
+                tl4.to(gridpropDiv3.current, {
+                    opacity: 1,
+                    duration: 1,
+                    x: -60,
+                })
+
+                const tl5 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv4.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    }
+                });
+    
+                tl5.to(gridpropDiv4.current, {
+                    opacity: 1,
+                    duration: 1,
+                    x: 60,
+                })
+
+                const tl6 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDivTop.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    }
+                });
+
+                tl6.to(gridpropDivTop.current, {
+                    opacity: 1,
+                    duration: 1,
+                })
+
+                const tl7 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDivBot.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    }
+                });
+
+                tl7.to(gridpropDivBot.current, {
+                    opacity: 1,
+                    duration: 1,
+                })
+            }
 
             console.log(mainTerParaText1.current)
         
