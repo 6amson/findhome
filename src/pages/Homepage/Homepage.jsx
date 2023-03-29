@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 import './homepage.scss';
 import person1 from '../../assets/pic1.png';
 import person2 from '../../assets/pic2.png';
@@ -18,20 +18,23 @@ export default function Homepage() {
     const mainTerParaText2 = useRef(null);
     const mainTerParaText3 = useRef(null);
     const mainParaPhoto = useRef(null);
+    const filterDiv = useRef(null);
 
     useEffect(() => {
         const tl = gsap.timeline();
         gsap.registerPlugin(ScrollTrigger);
 
-       
+
+
+
 
         // if(mainPriParaText.current || mainsecParaText.current || mainTerParaText.current
         //     || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
-                
+
         //     }
-        if(mainPriParaText.current  || mainsecParaText.current || mainTerParaText.current 
+        if (mainPriParaText.current || mainsecParaText.current || mainTerParaText.current
             || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current
-            || mainParaPhoto.current){
+            || mainParaPhoto.current) {
             tl.to(mainPriParaText.current, {
                 duration: 0.5,
                 autoAlpha: 1,
@@ -39,52 +42,70 @@ export default function Homepage() {
                 delay: 0.5,
                 x: -100
             })
-            .to(mainsecParaText.current, {
-                duration: 0.5,
-                autoAlpha: 1,
-                ease: 'easeOut',
-                delay: 0.2,
-                y: -100
+                .to(mainsecParaText.current, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    ease: 'easeOut',
+                    delay: 0.2,
+                    y: -100
+                })
+                .to(mainParaPhoto.current, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    ease: 'power2',
+                    overlap: -0.5,
+                    scale: 1,
+                })
+                .to(mainTerParaText.current, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    ease: 'bounce',
+                    y: 100,
+                    overlap: -1,
+                })
+                .to(mainTerParaText1.current, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    ease: 'power2',
+                    delay: 0.2,
+                    y: -50
+                })
+                .to(mainTerParaText2.current, {
+                    duration: 0.3,
+                    autoAlpha: 1,
+                    ease: 'power2',
+                    delay: 0.1,
+                    y: -50
+                })
+                .to(mainTerParaText3.current, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    ease: 'power2',
+                    delay: 0.1,
+                    y: -50
+                })
+
+            const tl1 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: filterDiv.current,
+                    start: "top 80%",
+                    end: "bottom 50%",
+                    scrub: true,
+                    markers: true
+                }
+            });
+
+            tl1.to(filterDiv.current, {
+                opacity: 1,
+                y: 100,
+                duration: 2,
             })
-            .to(mainParaPhoto.current, {
-                duration: 0.5,
-                autoAlpha: 1,
-                ease: 'power2',
-                overlap: -0.5,
-                scale: 1,
-            })
-            .to(mainTerParaText.current,{
-                duration: 0.5,
-                autoAlpha: 1,
-                ease: 'bounce',
-                delay: 0.2,
-                y: 100
-            })
-            .to(mainTerParaText1.current,{
-                duration: 0.3,
-                autoAlpha: 1,
-                ease: 'power2',
-                delay: 0.2,
-                y: -50
-            })
-            .to(mainTerParaText2.current,{
-                duration: 0.3,
-                autoAlpha: 1,
-                ease: 'power2',
-                delay: 0.1,
-                y: -50
-            })
-            .to(mainTerParaText3.current,{
-                duration: 0.5,
-                autoAlpha: 1,
-                ease: 'power2',
-                delay: 0.1,
-                y: -50
-            })
-            
+
+
+
             console.log(mainTerParaText1.current)
         }
-        
+
 
 
     }, [])
@@ -143,7 +164,7 @@ export default function Homepage() {
             </div>
 
             <div className='filterDiv'>
-                <div className='filter_Div'>
+                <div ref={filterDiv} className='filter_Div'>
                     <div className='search_first_text'>
                         <p>Search for available properties</p>
                     </div>
@@ -491,62 +512,62 @@ export default function Homepage() {
 
             <div className='latestProperties latestProperties1'>
                 <div className='latest_Properties latest_Properties1'>
-                        <div className='latestPropDiv latestPropDiv1'>
+                    <div className='latestPropDiv latestPropDiv1'>
 
-                            <div className='gridProperties gridProperties1'>
+                        <div className='gridProperties gridProperties1'>
 
-                                <div className='gridPropertiesPic'>
-                                
-                                    <div className='divPic4'>
-                                    </div>
-                                </div>
+                            <div className='gridPropertiesPic'>
 
-                                <div className='gridPropertiesText gridPropertiesText1'>
-                                    <p>4 July, 2023</p>
-                                    <p>REDEAN asks Nigerians to embrace real estate business</p>
-                                    <p>See More</p>
-
+                                <div className='divPic4'>
                                 </div>
                             </div>
 
-                            <div className='gridProperties gridProperties1'>
+                            <div className='gridPropertiesText gridPropertiesText1'>
+                                <p>4 July, 2023</p>
+                                <p>REDEAN asks Nigerians to embrace real estate business</p>
+                                <p>See More</p>
 
-                                <div className='gridPropertiesPic'>
-                                
-                                    <div className='divPic5'>
-                                    </div>
-                                </div>
-
-                                <div className='gridPropertiesText gridPropertiesText1'>
-                                    <p>4 July, 2023</p>
-                                    <p>REDEAN asks Nigerians to embrace real estate business</p>
-                                    <p>See More</p>
-
-                                </div>
-                            </div>
-
-                            <div className='gridProperties gridProperties1'>
-
-                                <div className='gridPropertiesPic'>
-                                
-                                    <div className='divPic6'>
-                                    </div>
-                                </div>
-
-                                <div className='gridPropertiesText gridPropertiesText1'>
-                                    <p>4 July, 2023</p>
-                                    <p>REDEAN asks Nigerians to embrace real estate business</p>
-                                    <p>See More</p>
-
-                                </div>
                             </div>
                         </div>
-                   
+
+                        <div className='gridProperties gridProperties1'>
+
+                            <div className='gridPropertiesPic'>
+
+                                <div className='divPic5'>
+                                </div>
+                            </div>
+
+                            <div className='gridPropertiesText gridPropertiesText1'>
+                                <p>4 July, 2023</p>
+                                <p>REDEAN asks Nigerians to embrace real estate business</p>
+                                <p>See More</p>
+
+                            </div>
+                        </div>
+
+                        <div className='gridProperties gridProperties1'>
+
+                            <div className='gridPropertiesPic'>
+
+                                <div className='divPic6'>
+                                </div>
+                            </div>
+
+                            <div className='gridPropertiesText gridPropertiesText1'>
+                                <p>4 July, 2023</p>
+                                <p>REDEAN asks Nigerians to embrace real estate business</p>
+                                <p>See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <footer>
-                < Footer/>
+                < Footer />
             </footer>
         </div>
     )
