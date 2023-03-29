@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef } from 'react';
-
+import { useMediaQuery } from 'react-responsive';
 import './homepage.scss';
 import person1 from '../../assets/pic1.png';
 import person2 from '../../assets/pic2.png';
@@ -12,6 +12,7 @@ import Footer from '../../components/Footer/Footer'
 
 export default function Homepage() {
 
+
     const mainPriParaText = useRef(null);
     const mainsecParaText = useRef(null);
     const mainTerParaText = useRef(null);
@@ -20,6 +21,9 @@ export default function Homepage() {
     const mainTerParaText3 = useRef(null);
     const mainParaPhoto = useRef(null);
     const filterDiv = useRef(null);
+
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 1300px)' });
+
 
     useEffect(() => {
         const tl = gsap.timeline();
@@ -87,8 +91,8 @@ export default function Homepage() {
             const tl1 = gsap.timeline({
                 scrollTrigger: {
                     trigger: filterDiv.current,
-                    start: "top 80%",
-                    end: "bottom 20%",
+                    start: "top 50%",
+                    end: "bottom 5%",
                     scrub: true,
                     markers: true
                 }
