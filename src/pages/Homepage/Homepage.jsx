@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef } from 'react';
+
 import './homepage.scss';
 import person1 from '../../assets/pic1.png';
 import person2 from '../../assets/pic2.png';
@@ -32,9 +33,7 @@ export default function Homepage() {
         //     || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
 
         //     }
-        if (mainPriParaText.current || mainsecParaText.current || mainTerParaText.current
-            || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current
-            || mainParaPhoto.current) {
+       
             tl.to(mainPriParaText.current, {
                 duration: 0.5,
                 autoAlpha: 1,
@@ -89,7 +88,7 @@ export default function Homepage() {
                 scrollTrigger: {
                     trigger: filterDiv.current,
                     start: "top 80%",
-                    end: "bottom 50%",
+                    end: "bottom 20%",
                     scrub: true,
                     markers: true
                 }
@@ -97,14 +96,14 @@ export default function Homepage() {
 
             tl1.to(filterDiv.current, {
                 opacity: 1,
-                y: 100,
-                duration: 2,
+                y: 60,
+                duration: 1,
             })
 
 
 
             console.log(mainTerParaText1.current)
-        }
+        
 
 
 
