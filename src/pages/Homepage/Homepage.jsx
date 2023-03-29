@@ -24,6 +24,10 @@ export default function Homepage() {
     const gridpropDiv = useRef(null);
     const gridpropDiv1 = useRef(null);
     const gridpropDiv2 = useRef(null);
+    const gridpropDiv3 = useRef(null);
+    const gridpropDiv4 = useRef(null);
+    const gridpropDivTop = useRef(null);
+    const gridpropDivBot = useRef(null);
 
     const isSmallScreen = useMediaQuery({ query: '(max-width: 695px)' });
 
@@ -143,7 +147,72 @@ export default function Homepage() {
                     x: 60,
                 })
                 
-            }
+                const tl4 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv3.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+    
+                tl4.to(gridpropDiv3.current, {
+                    opacity: 1,
+                    duration: 1,
+                    x: -60,
+                })
+
+                const tl5 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv4.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+    
+                tl5.to(gridpropDiv4.current, {
+                    opacity: 1,
+                    duration: 1,
+                    x: 60,
+                })
+
+                const tl6 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDivTop.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+
+                tl6.to(gridpropDivTop.current, {
+                    opacity: 1,
+                    duration: 1,
+                })
+
+                const tl7 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDivBot.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+
+                tl7.to(gridpropDivBot.current, {
+                    opacity: 1,
+                    duration: 1,
+                })
+
+               
+             } //elseif(isSmallScreen){
+
+            // }
 
             console.log(mainTerParaText1.current)
         
@@ -324,7 +393,7 @@ export default function Homepage() {
 
                         </div>
 
-                        <div className='gridProperties'>
+                        <div ref={gridpropDivTop} className='gridProperties'>
 
                             <div className='gridPropertiesPic'>
                                 <p>For sale</p>
@@ -556,7 +625,7 @@ export default function Homepage() {
                 <div className='latest_Properties latest_Properties1'>
                     <div className='latestPropDiv latestPropDiv1'>
 
-                        <div className='gridProperties gridProperties1'>
+                        <div ref={gridpropDiv3} className='gridProperties gridProperties1'>
 
                             <div className='gridPropertiesPic'>
 
@@ -580,7 +649,7 @@ export default function Homepage() {
                                 </div>
                             </div>
 
-                            <div className='gridPropertiesText gridPropertiesText1'>
+                            <div ref={gridpropDivBot} className='gridPropertiesText gridPropertiesText1'>
                                 <p>4 July, 2023</p>
                                 <p>REDEAN asks Nigerians to embrace real estate business</p>
                                 <p>See More</p>
@@ -588,7 +657,7 @@ export default function Homepage() {
                             </div>
                         </div>
 
-                        <div className='gridProperties gridProperties1'>
+                        <div ref={gridpropDiv4}className='gridProperties gridProperties1'>
 
                             <div className='gridPropertiesPic'>
 
