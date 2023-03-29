@@ -150,6 +150,7 @@ position: relative;
     height: 8rem;
     padding: 1rem;
     border-radius: 3px;
+    transform: scale(0.8);
 
     .search_first_text{
         font-family: $priFont;
@@ -270,6 +271,24 @@ position: relative;
     background-color: whitesmoke;
 }
 
+.gridProperties:nth-child(1){
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+    right: -60px;
+}
+
+.gridProperties:nth-child(2){
+    opacity: 1;
+    z-index: 1000;
+}
+
+.gridProperties:nth-child(3){
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+    left: -60px;
+}
 
 .gridPropertiesPic{
     width: 100%;

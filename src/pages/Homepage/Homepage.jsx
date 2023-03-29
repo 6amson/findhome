@@ -21,8 +21,11 @@ export default function Homepage() {
     const mainTerParaText3 = useRef(null);
     const mainParaPhoto = useRef(null);
     const filterDiv = useRef(null);
+    const gridpropDiv = useRef(null);
+    const gridpropDiv1 = useRef(null);
+    const gridpropDiv2 = useRef(null);
 
-    const isSmallScreen = useMediaQuery({ query: '(max-width: 1300px)' });
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 695px)' });
 
 
     useEffect(() => {
@@ -94,7 +97,7 @@ export default function Homepage() {
                     start: "top 80%",
                     end: "bottom 60%",
                     scrub: true,
-                    markers: true
+                    markers: true,
                 }
             });
 
@@ -102,9 +105,45 @@ export default function Homepage() {
                 opacity: 1,
                 y: 60,
                 duration: 1,
+                scale: 1,
             })
 
 
+            if(!isSmallScreen){
+                const tl2 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv1.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        markers: true,
+                        
+                    }
+                });
+    
+                tl2.to(gridpropDiv1.current, {
+                    opacity: 1,
+                    x: -60,
+                    duration: 1,
+                })
+
+                const tl3 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: gridpropDiv2.current,
+                        start: "top 90%",
+                        end: "bottom 60%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+    
+                tl3.to(gridpropDiv2.current, {
+                    opacity: 1,
+                    duration: 1,
+                    x: 60,
+                })
+                
+            }
 
             console.log(mainTerParaText1.current)
         
@@ -222,7 +261,7 @@ export default function Homepage() {
 
                     <div className='latestPropDiv'>
 
-                        <div className='gridProperties'>
+                        <div ref={gridpropDiv1} className='gridProperties'>
 
                             <div className='gridPropertiesPic'>
                                 <p>For sale</p>
@@ -347,7 +386,7 @@ export default function Homepage() {
                         </div>
 
 
-                        <div className='gridProperties'>
+                        <div ref={gridpropDiv2} className='gridProperties'>
 
                             <div className='gridPropertiesPic'>
                                 <p>For sale</p>
