@@ -28,15 +28,29 @@ export default function Homepage() {
         //     || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
                 
         //     }
-        if(mainPriParaText.current){
+        if(mainPriParaText.current  || mainsecParaText.current || mainTerParaText.current 
+            || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
             tl.to(mainPriParaText.current, {
                 duration: 0.5,
                 autoAlpha: 1,
-                ease: 'none',
-                delay: 1,
+                ease: 'easeIn-Out',
+                delay: 0.5,
                 x: -100
             })
-            console.log('done')
+            .to(mainsecParaText.current, {
+                duration: 0.5,
+                autoAlpha: 1,
+                ease: 'easeOut',
+                delay: 0.2,
+                y: -100
+            })
+            .to(mainTerParaText.current,{
+                duration: 0.5,
+                autoAlpha: 1,
+                ease: 'bounce',
+                y: 100
+            })
+            console.log(gsap)
         }
         
 
@@ -60,9 +74,9 @@ export default function Homepage() {
                         </div>
 
                     </div>
-                    <div className='firstCon_secText'>
+                    <div className='firstCon_secText' ref={mainsecParaText}>
                         <div>
-                            <p ref={mainsecParaText}>
+                            <p>
                                 Looking for the perfect home? We will work to help you find the best Properties
                                 for your needs. Be it family home, for vacation, villa or investment property.
                                 And we will be with you every step of the way, from finding the right home, to making an offer,
