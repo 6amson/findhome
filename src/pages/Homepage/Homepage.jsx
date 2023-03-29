@@ -17,6 +17,7 @@ export default function Homepage() {
     const mainTerParaText1 = useRef(null);
     const mainTerParaText2 = useRef(null);
     const mainTerParaText3 = useRef(null);
+    const mainParaPhoto = useRef(null);
 
     useEffect(() => {
         const tl = gsap.timeline();
@@ -29,7 +30,8 @@ export default function Homepage() {
                 
         //     }
         if(mainPriParaText.current  || mainsecParaText.current || mainTerParaText.current 
-            || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
+            || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current
+            || mainParaPhoto.current){
             tl.to(mainPriParaText.current, {
                 duration: 0.5,
                 autoAlpha: 1,
@@ -44,13 +46,43 @@ export default function Homepage() {
                 delay: 0.2,
                 y: -100
             })
+            .to(mainParaPhoto.current, {
+                duration: 0.5,
+                autoAlpha: 1,
+                ease: 'power2',
+                overlap: -0.5,
+                scale: 1,
+            })
             .to(mainTerParaText.current,{
                 duration: 0.5,
                 autoAlpha: 1,
                 ease: 'bounce',
+                delay: 0.2,
                 y: 100
             })
-            console.log(gsap)
+            .to(mainTerParaText1.current,{
+                duration: 0.3,
+                autoAlpha: 1,
+                ease: 'power2',
+                delay: 0.2,
+                y: -50
+            })
+            .to(mainTerParaText2.current,{
+                duration: 0.3,
+                autoAlpha: 1,
+                ease: 'power2',
+                delay: 0.1,
+                y: -50
+            })
+            .to(mainTerParaText3.current,{
+                duration: 0.5,
+                autoAlpha: 1,
+                ease: 'power2',
+                delay: 0.1,
+                y: -50
+            })
+            
+            console.log(mainTerParaText1.current)
         }
         
 
@@ -105,7 +137,7 @@ export default function Homepage() {
                     </div>
                 </div>
 
-                <div className='secondCon'>
+                <div ref={mainParaPhoto} className='secondCon'>
                 </div>
 
             </div>

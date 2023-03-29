@@ -41,6 +41,7 @@
 }
 
 .firstCon{
+    z-index: 1000;
     height: 90%;
     width: 90%;
     margin-left: 2.5rem;
@@ -98,7 +99,12 @@
         margin-bottom: 4rem;
 
         div{
+            position: relative;
+            top: 50px;
+            opacity: 0;
+
             p:first-child{
+                
                 font-weight: bolder;
                 font-size: 1.5rem;
                 font-family: $mainFont;
@@ -113,8 +119,10 @@
 
 .secondCon{
     // width: 100%;
+    z-index: 10;
+    transform: scale(1.5);
+    opacity: 0;
     height: 90%;
-    background-color: violet;
     background-color: $secondaryColor;
     background-image: url("../../assets/main2.png");
     background-repeat: no-repeat;
