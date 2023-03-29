@@ -1,3 +1,6 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useEffect, useRef} from 'react';
 import './homepage.scss';
 import person1 from '../../assets/pic1.png';
 import person2 from '../../assets/pic2.png';
@@ -7,6 +10,41 @@ import Footer from '../../components/Footer/Footer'
 
 
 export default function Homepage() {
+
+    const mainPriParaText = useRef(null);
+    const mainsecParaText = useRef(null);
+    const mainTerParaText = useRef(null);
+    const mainTerParaText1 = useRef(null);
+    const mainTerParaText2 = useRef(null);
+    const mainTerParaText3 = useRef(null);
+
+    useEffect(() => {
+        const tl = gsap.timeline();
+        gsap.registerPlugin(ScrollTrigger);
+
+       
+
+        // if(mainPriParaText.current || mainsecParaText.current || mainTerParaText.current
+        //     || mainTerParaText1.current || mainTerParaText2.current || mainTerParaText3.current){
+                
+        //     }
+        if(mainPriParaText.current){
+            tl.to(mainPriParaText.current, {
+                duration: 0.5,
+                autoAlpha: 1,
+                ease: 'none',
+                delay: 1,
+                x: -100
+            })
+            console.log('done')
+        }
+        
+
+
+    }, [])
+
+
+
     return (
         <div className='container'>
             <div className='NavDivCont'>
@@ -16,7 +54,7 @@ export default function Homepage() {
             <div className='mainContainer'>
 
                 <div className='firstCon'>
-                    <div className='firstCon_mainText'>
+                    <div className='firstCon_mainText' ref={mainPriParaText}>
                         <div>
                             <p>Find Your Future Dream Home</p>
                         </div>
@@ -24,7 +62,7 @@ export default function Homepage() {
                     </div>
                     <div className='firstCon_secText'>
                         <div>
-                            <p>
+                            <p ref={mainsecParaText}>
                                 Looking for the perfect home? We will work to help you find the best Properties
                                 for your needs. Be it family home, for vacation, villa or investment property.
                                 And we will be with you every step of the way, from finding the right home, to making an offer,
@@ -33,20 +71,20 @@ export default function Homepage() {
                         </div>
 
                         <div>
-                            <p>Get Started</p>
+                            <p ref={mainTerParaText}>Get Started</p>
                         </div>
                     </div>
 
                     <div className='firstCon_dataText'>
-                        <div>
+                        <div ref={mainTerParaText1}>
                             <p>2200<span>+</span></p>
                             <p>Listed properties</p>
                         </div>
-                        <div>
+                        <div ref={mainTerParaText2}>
                             <p>5200<span>+</span></p>
                             <p>Happy customers</p>
                         </div>
-                        <div>
+                        <div ref={mainTerParaText3}>
                             <p>200<span>+</span></p>
                             <p>Awards</p>
                         </div>

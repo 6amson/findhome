@@ -52,6 +52,9 @@
         font-size: 3rem;
         margin-bottom: 2rem;
         font-weight: 600;
+        position: relative;
+        opacity: 0;
+        left: 100px;
     }
 
     .firstCon_secText{
@@ -580,7 +583,6 @@ position: relative;
             }
         }
     }
-
     
 }
 
