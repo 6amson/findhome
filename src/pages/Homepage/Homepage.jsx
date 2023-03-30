@@ -86,24 +86,27 @@ export default function Homepage() {
                     y: -50
                 })
 
-            const tl1 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: filterDiv.current,
-                    start: "top 80%",
-                    end: "bottom 60%",
-                    scrub: true,
-                }
-            });
-
-            tl1.to(filterDiv.current, {
-                opacity: 1,
-                y: 60,
-                duration: 1,
-                scale: 1,
-            })
+           
 
 
             if(!isSmallScreen){
+
+                const tl1 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: filterDiv.current,
+                        start: "top 80%",
+                        end: "bottom 60%",
+                        scrub: true,
+                    }
+                });
+    
+                tl1.to(filterDiv.current, {
+                    opacity: 1,
+                    y: 60,
+                    duration: 1,
+                    scale: 1,
+                })
+                
                 const tl2 = gsap.timeline({
                     scrollTrigger: {
                         trigger: gridpropDiv1.current,
