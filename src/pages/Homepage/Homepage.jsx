@@ -54,7 +54,6 @@ export default function Homepage() {
                     duration: 0.5,
                     autoAlpha: 1,
                     ease: 'power2',
-                    overlap: -0.5,
                     scale: 1,
                 })
                 .to(mainTerParaText.current, {
@@ -106,7 +105,7 @@ export default function Homepage() {
                     duration: 1,
                     scale: 1,
                 })
-                
+
                 const tl2 = gsap.timeline({
                     scrollTrigger: {
                         trigger: gridpropDiv1.current,
@@ -198,6 +197,24 @@ export default function Homepage() {
 
                
             }else if(isSmallScreen){
+
+                const tl1 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: mainTerParaText.current,
+                        start: "top 50%",
+                        end: "top 80%",
+                        scrub: true,
+                        markers: true
+                    }
+                });
+    
+                tl1.to(filterDiv.current, {
+                    opacity: 1,
+                    // y: 60,
+                    duration: 0.5,
+                    scale: 1,
+                })
+
                 const tl2 = gsap.timeline({
                     scrollTrigger: {
                         trigger: gridpropDiv1.current,
@@ -288,7 +305,7 @@ export default function Homepage() {
                 })
             }
 
-            console.log(mainTerParaText1.current)
+            // console.log(mainTerParaText1.current)
         
 
 
