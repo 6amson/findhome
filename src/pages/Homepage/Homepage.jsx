@@ -198,21 +198,29 @@ export default function Homepage() {
                
             }else if(isSmallScreen){
 
-                const tl1 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: mainTerParaText.current,
-                        start: "top 50%",
-                        end: "top 80%",
-                        scrub: true,
-                        markers: true
-                    }
-                });
+                // const tl1 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: filterDiv.current,
+                //         start: "top 50%",
+                //         end: "top 30%",
+                //         scrub: true,
+                //         markers: true
+                //     }
+                // });
     
-                tl1.to(filterDiv.current, {
+                gsap.to(filterDiv.current, {
                     opacity: 1,
                     // y: 60,
                     duration: 0.5,
                     scale: 1,
+                    scrollTrigger: {
+                        trigger: filterDiv.current,
+                        start: "bottom 10px",
+                        end: "top 30%",
+                        scrub: true,
+                        markers: true,
+                        pin: true,
+                    }
                 })
 
                 const tl2 = gsap.timeline({
