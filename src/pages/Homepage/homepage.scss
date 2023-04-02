@@ -29,7 +29,7 @@
     position: relative;
     top: 1rem;
     left: 0;
-    z-index: 10;  
+    z-index: 10000000;  
 }
 
 .mainContainer{
@@ -43,7 +43,7 @@
 }
 
 .firstCon{
-    z-index: 1000;
+    z-index: 10;
     height: 90%;
     width: 90%;
     margin-left: 2.5rem;

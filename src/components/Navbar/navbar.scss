@@ -88,25 +88,21 @@
 @media (max-width: 650px){
 
     .menuCon{
-         position: absolute;
-        //   background-color: rgb(70, 144, 97);  
+        position: absolute;
+        //background-color: rgb(70, 144, 97);  
           margin-top: 10rem;
           width: 10rem;
           right: 3.5rem;
           top: -10rem;
           transition: top 0.5s ease-in, opacity 0.4s ease-in;
           opacity: 0;
-          
-          
         ul{
              background-color: rgb(255, 255, 255);
              height: 13rem;
              display: grid;
              box-shadow: 2px 2px 2px grey;
-             
             li{
-                color: rgb(64, 63, 63);;
-                
+                color: rgb(64, 63, 63);
                 width: 9rem;
                 margin-left: 0.5rem;
                 margin-bottom: 1rem;
@@ -123,19 +119,19 @@
             li:hover{
                 padding: 0.5rem;
                 margin-left: 0rem;
-                color: rgb(64, 63, 63);  
+                color: rgb(64, 63, 63);
             }
         }
     }
 
     .btnCon{
         margin-right: 1rem;
-
     }
 
     .hamburger{
         display: block;
         right: 8rem;
+        cursor: pointer;
     }
 
     .noDisplay{

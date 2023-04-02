@@ -214,12 +214,12 @@ export default function Homepage() {
                     duration: 0.5,
                     scale: 1,
                     scrollTrigger: {
-                        trigger: filterDiv.current,
-                        start: "bottom 10px",
-                        end: "top 30%",
-                        scrub: true,
-                        markers: true,
-                        pin: true,
+                    trigger: mainPriParaText.current,
+                    start: "top 10px",
+                    end: "bottom center",
+                    //end: "+=30%",
+                    scrub: true,
+                     markers: true
                     }
                 })
 
