@@ -226,7 +226,7 @@ export default function Homepage() {
                     scrollTrigger: {
                         trigger: gridpropDiv1.current,
                         start: "-600px 300px",
-                        end: "-300px 500px",
+                        end: "-400px 100px",
                         scrub: true,
                         // markers: true,
                     }
