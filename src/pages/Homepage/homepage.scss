@@ -519,7 +519,6 @@ position: relative;
     margin-right: 4.5rem;
     margin-top: 3rem;
     font-size: 1.5rem;
-    
 }
 
 .services_Div{
@@ -554,6 +553,8 @@ position: relative;
     height: 100%;
     background-image: url(../../assets/indoor.jpg);
     background-size: cover;
+    transform: scale(0.8);
+    opacity: 0;
 }
 
 .left_services_Div1{
@@ -574,7 +575,6 @@ position: relative;
     .realtorDiv2{
         width: 90%;
         margin: auto;
-
     }
 }
 
@@ -596,7 +596,7 @@ position: relative;
         
         
         span{
-            font-size: 1rem;
+           font-size: 1rem;
            margin-right: 0.5rem;
            bottom: 0;
         }
@@ -695,6 +695,10 @@ position: relative;
         padding: 0.5rem 2.5rem ;
         color: whitesmoke;
         font-family: $secFont;
+        cursor: pointer;
+        position: relative;
+        top: -100px;
+        opacity: 0;
         cursor: pointer;
     }
 }

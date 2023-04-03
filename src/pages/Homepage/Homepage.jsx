@@ -28,6 +28,8 @@ export default function Homepage() {
     const gridpropDiv4 = useRef(null);
     const gridpropDivTop = useRef(null);
     const gridpropDivBot = useRef(null);
+    const serviceDivPic = useRef(null);
+    const serviceDivButton = useRef(null);
 
     const isSmallScreen = useMediaQuery({ query: '(max-width: 695px)' });
 
@@ -61,7 +63,6 @@ export default function Homepage() {
                     autoAlpha: 1,
                     ease: 'bounce',
                     y: 100,
-                    overlap: -1,
                 })
                 .to(mainTerParaText1.current, {
                     duration: 0.3,
@@ -89,6 +90,31 @@ export default function Homepage() {
 
 
             if(!isSmallScreen){
+                gsap.to(serviceDivPic.current, {
+                    opacity: 1,
+                    duration: 1,
+                    scale: 1,
+                    scrollTrigger: {
+                        trigger: serviceDivPic.current,
+                        start: "top 300px",
+                        end: "center 200px",
+                        scrub: true,
+                    }
+                });
+
+                gsap.to(serviceDivButton.current, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    ease: 'ease',
+                    y: 100,
+                    scrollTrigger: {
+                        trigger: serviceDivPic.current,
+                        start: "top 300px",
+                        end: "center 200px",
+                        scrub: true,
+                    }
+                });
+
 
                 const tl1 = gsap.timeline({
                     scrollTrigger: {
@@ -197,30 +223,31 @@ export default function Homepage() {
 
                
             }else if(isSmallScreen){
+                gsap.to(serviceDivPic.current, {
+                    opacity: 1,
+                    duration: 1,
+                    scale: 1,
+                    scrollTrigger: {
+                        trigger: serviceDivPic.current,
+                        start: "-900px 300px",
+                        end: "-500px 200px",
+                        scrub: true,
+                    }
+                });
 
-                // const tl1 = gsap.timeline({
-                //     scrollTrigger: {
-                //         trigger: filterDiv.current,
-                //         start: "top 50%",
-                //         end: "top 30%",
-                //         scrub: true,
-                //         markers: true
-                //     }
-                // });
-    
-                // gsap.to(filterDiv.current, {
-                //     opacity: 1,
-                //     // y: 60,
-                //     duration: 0.5,
-                //     scale: 1,
-                //     scrollTrigger: {
-                //     trigger: filterDiv.current,
-                //     start: "-550px 250px",
-                //     end: "-500px 200px",
-                //     //end: "+=30%",
-                //     scrub: true,
-                //     }
-                // })
+                gsap.to(serviceDivButton.current, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                    ease: 'ease',
+                    y: 100,
+                    scrollTrigger: {
+                        trigger: gridpropDiv.current,
+                        start: "-750px 400px",
+                        end: "-250px 200px",
+                        scrub: true,
+                    }
+                });
+
 
                 const tl2 = gsap.timeline({
                     scrollTrigger: {
@@ -253,35 +280,41 @@ export default function Homepage() {
                     duration: 1,
                     x: 60,
                 })
-                
-                const tl4 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: gridpropDiv3.current,
-                        start: "top 90%",
-                        end: "bottom 60%",
-                        scrub: true,
-                    }
-                });
+             
     
-                tl4.to(gridpropDiv3.current, {
+                gsap.to(gridpropDiv3.current, {
                     opacity: 1,
                     duration: 1,
                     x: -60,
+                    scrollTrigger: {
+                        trigger: gridpropDiv3.current,
+                        start: "-700px 300px",
+                        end: "-400px 200px",
+                        scrub: true,
+                        // markers: true,
+                    }
                 })
 
-                const tl5 = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: gridpropDiv4.current,
-                        start: "top 90%",
-                        end: "bottom 60%",
-                        scrub: true,
-                    }
-                });
+                // const tl5 = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: gridpropDiv4.current,
+                //         start: "top 90%",
+                //         end: "bottom 60%",
+                //         scrub: true,
+                //     }
+                // });
     
-                tl5.to(gridpropDiv4.current, {
+                gsap.to(gridpropDiv4.current, {
                     opacity: 1,
                     duration: 1,
                     x: 60,
+                    scrollTrigger: {
+                        trigger: gridpropDiv4.current,
+                        start: "-700px 300px",
+                        end: "-400px 200px",
+                        scrub: true,
+                        // markers: true,
+                    }
                 })
 
                 const tl6 = gsap.timeline({
@@ -687,14 +720,14 @@ export default function Homepage() {
 
                         </div>
                         <div className='right_services_Div1'>
-                            <div className='right_services_Div1Pic'>
+                            <div ref={serviceDivPic} className='right_services_Div1Pic'>
 
                             </div>
                         </div>
 
                     </div>
 
-                    <div className='services_Div2'>
+                    <div ref={gridpropDiv} className='services_Div2'>
                         <div>
                             <p>OUR SERVICES</p>
                             <p>Your Comfort Is Our Priority</p>
@@ -710,7 +743,7 @@ export default function Homepage() {
                                 <li>Managed viewings</li>
                             </ul>
 
-                            <p>
+                            <p ref={serviceDivButton}>
                                 See More
                             </p>
 
