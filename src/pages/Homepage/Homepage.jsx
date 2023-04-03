@@ -208,19 +208,19 @@ export default function Homepage() {
                 //     }
                 // });
     
-                gsap.to(filterDiv.current, {
-                    opacity: 1,
-                    // y: 60,
-                    duration: 0.5,
-                    scale: 1,
-                    scrollTrigger: {
-                    trigger: filterDiv.current,
-                    start: "-550px 250px",
-                    end: "-500px 200px",
-                    //end: "+=30%",
-                    scrub: true,
-                    }
-                })
+                // gsap.to(filterDiv.current, {
+                //     opacity: 1,
+                //     // y: 60,
+                //     duration: 0.5,
+                //     scale: 1,
+                //     scrollTrigger: {
+                //     trigger: filterDiv.current,
+                //     start: "-550px 250px",
+                //     end: "-500px 200px",
+                //     //end: "+=30%",
+                //     scrub: true,
+                //     }
+                // })
 
                 const tl2 = gsap.timeline({
                     scrollTrigger: {
