@@ -214,22 +214,21 @@ export default function Homepage() {
                     duration: 0.5,
                     scale: 1,
                     scrollTrigger: {
-                    trigger: mainPriParaText.current,
-                    start: "top 10px",
-                    end: "bottom center",
+                    trigger: filterDiv.current,
+                    start: "-550px 250px",
+                    end: "-500px 200px",
                     //end: "+=30%",
                     scrub: true,
-                     markers: true
                     }
                 })
 
                 const tl2 = gsap.timeline({
                     scrollTrigger: {
                         trigger: gridpropDiv1.current,
-                        start: "top 90%",
-                        end: "bottom 60%",
+                        start: "-600px 300px",
+                        end: "-300px 500px",
                         scrub: true,
-                        
+                        // markers: true,
                     }
                 });
     
@@ -242,9 +241,10 @@ export default function Homepage() {
                 const tl3 = gsap.timeline({
                     scrollTrigger: {
                         trigger: gridpropDiv2.current,
-                        start: "top 90%",
-                        end: "bottom 60%",
+                        start: "-800px 300px",
+                        end: "-500px 100px",
                         scrub: true,
+                        // markers: true,
                     }
                 });
     
