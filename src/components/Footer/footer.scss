@@ -111,18 +111,8 @@
        ul{
         list-style: none;
         font-size: 0.9rem;
-
-        li{
-
-        }
        }
     }
-
-     
-    // div:first-child{
-
-    // }
-
 }
 
 
@@ -150,6 +140,17 @@
     .footerDivUpper {
       grid-template-columns: 1fr;
     }
+
+    .footerDivUpper{
+        
+        div:first-child{
+            
+            div:first-child{
+              left: -200px;
+              opacity: 1;
+            }
+        }
+    } 
 
     .footerDivLower{
         display: grid;
@@ -185,7 +186,6 @@
             position: relative;
             left: -0.7rem;
             div:nth-child(2){
-              
                
                 p:nth-child(2){
                     font-size: 0.8rem;

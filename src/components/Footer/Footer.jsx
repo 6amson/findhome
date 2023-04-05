@@ -10,7 +10,7 @@ export default function Footer() {
     const footerPic1 = useRef(null);
     const footerPic2 = useRef(null);
     const footerDiv = useRef(null);
-    const isSmallScreen = useMediaQuery({ query: '(max-width: 695px)' });
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 815px)' });
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -60,6 +60,33 @@ export default function Footer() {
                     trigger: footerDiv.current,
                     start: "-800px 300px",
                     end: "-600px 200px",
+                    scrub: true,
+                }
+            })
+
+            gsap.to(footerPic1.current, {
+                x: '190px',
+                autoAlpha: 1,
+                duration: 1,
+                ease: 'easeIn-Out',
+                scrollTrigger: {
+                    trigger: footerDiv.current,
+                    start: "-800px 300px",
+                    end: "-300px 200px",
+                    scrub: true,
+                    markers: true
+                }
+            })
+
+            gsap.to(footerPic2.current, {
+                y: '100px',
+                autoAlpha: 1,
+                duration: 1,
+                ease: 'easeOut',
+                scrollTrigger: {
+                    trigger: footerPic1.current,
+                    start: "-500px 300px",
+                    end: "-200px 200px",
                     scrub: true,
                 }
             })
