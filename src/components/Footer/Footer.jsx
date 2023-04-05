@@ -74,7 +74,6 @@ export default function Footer() {
                     start: "-800px 300px",
                     end: "-300px 200px",
                     scrub: true,
-                    markers: true
                 }
             })
 
