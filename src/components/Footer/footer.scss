@@ -81,12 +81,16 @@
 
 .div7{
     background-image: url(../../assets/aj.png);
-    
+    opacity: 0;
+    position: relative;
+    left: -200px;
 }
 
 .div8{
     background-image: url(../../assets/simi.png);
-    
+    position: relative;
+    bottom: 100px;
+    opacity: 0;
 }
 
 

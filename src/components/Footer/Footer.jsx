@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useMediaQuery } from 'react-responsive';
-import { getQueriesForElement } from '@testing-library/react';
+
 
 export default function Footer() {
 
@@ -22,7 +22,33 @@ export default function Footer() {
                 scrollTrigger: {
                     trigger: footerDiv.current,
                     start: "-200px 300px",
-                    end: "-100px 200px",
+                    end: "-50px 200px",
+                    scrub: true,
+                }
+            })
+
+            gsap.to(footerPic1.current, {
+                x: '200px',
+                autoAlpha: 1,
+                duration: 1,
+                ease: 'easeIn-Out',
+                scrollTrigger: {
+                    trigger: footerDiv.current,
+                    start: "-200px 300px",
+                    end: "-50px 200px",
+                    scrub: true,
+                }
+            })
+
+            gsap.to(footerPic2.current, {
+                y: '100px',
+                autoAlpha: 1,
+                duration: 1,
+                ease: 'easeOut',
+                scrollTrigger: {
+                    trigger: footerDiv.current,
+                    start: "-200px 300px",
+                    end: "-50px 200px",
                     scrub: true,
                 }
             })
@@ -35,7 +61,6 @@ export default function Footer() {
                     start: "-800px 300px",
                     end: "-600px 200px",
                     scrub: true,
-                    markers: true
                 }
             })
         }
