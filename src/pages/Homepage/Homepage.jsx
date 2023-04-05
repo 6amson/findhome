@@ -30,6 +30,7 @@ export default function Homepage() {
     const gridpropDivBot = useRef(null);
     const serviceDivPic = useRef(null);
     const serviceDivButton = useRef(null);
+    
 
     const isSmallScreen = useMediaQuery({ query: '(max-width: 695px)' });
 

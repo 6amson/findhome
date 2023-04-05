@@ -1,13 +1,52 @@
 import './footer.scss';
 import { useRef, useState, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useMediaQuery } from 'react-responsive';
+import { getQueriesForElement } from '@testing-library/react';
 
 export default function Footer() {
 
+    const footerPic1 = useRef(null);
+    const footerPic2 = useRef(null);
+    const footerDiv = useRef(null);
+    const isSmallScreen = useMediaQuery({ query: '(max-width: 695px)' });
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        if(!isSmallScreen){
+            gsap.to(footerDiv.current, {
+                backgroundColor:  '#010417',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: footerDiv.current,
+                    start: "-200px 300px",
+                    end: "-100px 200px",
+                    scrub: true,
+                }
+            })
+        }else if(isSmallScreen){
+            gsap.to(footerDiv.current, {
+                backgroundColor:  '#010417',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: footerDiv.current,
+                    start: "-800px 300px",
+                    end: "-600px 200px",
+                    scrub: true,
+                    markers: true
+                }
+            })
+        }
+
+    }, [])
+
     return (
         <div className='footerDiv'>
-            <div className='footerDivUpper'>
+            <div ref={footerDiv} className='footerDivUpper'>
                 <div className='footerUpper1'>
-                    <div className='div7'></div>
+                    <div ref={footerPic1} className='div7'></div>
                     <div>
                         <p>Anthony Joshua</p>
                         <p>I am glad i contacted findhome for my property,
@@ -19,7 +58,7 @@ export default function Footer() {
                 </div>
 
                 <div className='footerUpper2'>
-                    <div className='div8'></div>
+                    <div ref={footerPic2} className='div8'></div>
                     <div>
                         <p>Simisola</p>
                         <p>I am glad i contacted findhome for my property,
